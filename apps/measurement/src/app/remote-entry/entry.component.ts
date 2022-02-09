@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'ep-monorepo-measurement-entry',
   template: `<div class="container remote-entry">
     <!-- <h2>measurement's Remote Entry Component</h2> -->
-    <ep-monorepo-mmb-search></ep-monorepo-mmb-search>
+    <ep-monorepo-search-container></ep-monorepo-search-container>
   </div>`,
   styles: [
     `

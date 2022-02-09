@@ -21,9 +21,6 @@
       "@ep-monorepo/measurement/feature/search": [
         "libs/measurement/feature/search/src/index.ts"
       ],
-      "@ep-monorepo/measurement/feature/search-result": [
-        "libs/measurement/feature/search-result/src/index.ts"
-      ],
       "@ep-monorepo/shared/data-access/http-service": [
         "libs/shared/data-access/http-service/src/index.ts"
       ],
