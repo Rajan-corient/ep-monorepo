@@ -14,9 +14,8 @@ export class InputComponent implements OnInit {
   @Input() isRequired!: boolean;
   @Input() multiselectOptions: any;
   @Input() multiselecOptionLabel: any;
-  @Input() dateValue: any;
   @Input() control!: FormControl;
-  @Output() selectEvent = new EventEmitter<any>();
+  @Output() multiSelectEvent = new EventEmitter();
 
   searchEnum = SearchEnum;
 
@@ -26,7 +25,7 @@ export class InputComponent implements OnInit {
   }
 
   onMultiSelect(event: any) {
-    this.selectEvent.emit(event)
+    this.multiSelectEvent.emit(event)
   }
 
 }

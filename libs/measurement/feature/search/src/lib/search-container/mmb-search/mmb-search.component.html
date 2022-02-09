@@ -11,7 +11,7 @@
                     [control]="measurementSearchForm.get('assetGroup')" 
                     [multiselectOptions]="states" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'assetGroup')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'assetGroup')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -22,7 +22,7 @@
                     [control]="measurementSearchForm.get('meterOwner')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'meterOwner')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'meterOwner')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -33,7 +33,7 @@
                     [control]="measurementSearchForm.get('meterLocation')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'meterLocation')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'meterLocation')">
                     </ep-monorepo-input>
                 </div>
             </div>
@@ -46,7 +46,7 @@
                     [control]="measurementSearchForm.get('product')" 
                     [multiselectOptions]="cities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'product')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'product')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -57,7 +57,7 @@
                     [control]="measurementSearchForm.get('flowComputer')"
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'flowComputer')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'flowComputer')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -68,7 +68,7 @@
                     [control]="measurementSearchForm.get('meterName')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'meterName')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'meterName')">
                     </ep-monorepo-input>
                 </div>
             </div>
@@ -78,8 +78,7 @@
                     [type]="searchEnum.dateType"
                     [label]="measurementEnum.StartDateFrom"
                     [isRequired]="false"
-                    [control]="measurementSearchForm.get('fromDate')"
-                    [dateValue]="dateValue">
+                    [control]="measurementSearchForm.get('fromDate')">
                 </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -87,8 +86,7 @@
                     [type]="searchEnum.dateType"
                     [label]="measurementEnum.StartDateTo"
                     [isRequired]="false"
-                    [control]="measurementSearchForm.get('fromTo')"
-                    [dateValue]="dateValue">
+                    [control]="measurementSearchForm.get('fromTo')">
                 </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -99,7 +97,7 @@
                     [control]="measurementSearchForm.get('ticketStatus')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'ticketStatus')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'ticketStatus')">
                     </ep-monorepo-input>
                 </div>
             </div>
@@ -112,7 +110,7 @@
                     [control]="measurementSearchForm.get('ticketType')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'ticketType')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'ticketType')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">
@@ -123,7 +121,7 @@
                     [control]="measurementSearchForm.get('ticketNumber')" 
                     [multiselectOptions]="copyOfCities" 
                     multiselecOptionLabel="name"
-                    (selectEvent)="handleMultiSelect($event, 'ticketNumber')">
+                    (multiSelectEvent)="handleMultiSelect($event, 'ticketNumber')">
                     </ep-monorepo-input>
                 </div>
                 <div class="dew-input row">

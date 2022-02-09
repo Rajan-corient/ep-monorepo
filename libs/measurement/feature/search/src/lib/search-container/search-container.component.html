@@ -1,2 +1,7 @@
-<ep-monorepo-mmb-search></ep-monorepo-mmb-search>
+<ep-monorepo-mmb-search [measurementSearchForm]=measurementSearchForm 
+[states]="states" 
+[cities]="cities" 
+[copyOfCities]=copyOfCities
+(emitMultiselect)="getMultiselect($event)">
+</ep-monorepo-mmb-search>
 <ep-monorepo-search-result></ep-monorepo-search-result>

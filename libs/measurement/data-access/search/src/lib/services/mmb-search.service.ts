@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { cloneDeep } from 'lodash';
 import { delay, Observable, of, retry } from 'rxjs';
 import { City, State } from '../..';
 
@@ -175,5 +176,12 @@ export class MmbSearchService {
     )
   }
 
+  createCitiesList (cities:City[], states:State[]) {
+    return cities.filter((cityObj:City) => { 
+      return states.some((stateObj) => {
+        return cityObj.stateId == stateObj.id;
+      })
+    })
+  }
 
 }

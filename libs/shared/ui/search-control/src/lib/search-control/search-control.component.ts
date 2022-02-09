@@ -7,13 +7,12 @@ import { Component, Input, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class SearchControlComponent implements OnInit {
 
-  @Output() searchEvent = new EventEmitter<any>();
-  @Output() clearEvent = new EventEmitter<any>();
+  @Output() searchEvent = new EventEmitter();
+  @Output() clearEvent = new EventEmitter();
 
   constructor() { }
 
   ngOnInit(): void {
-
   }
 
   handleSearch (event: any) {
