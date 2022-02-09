@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "projects": {
+    "measurement": "apps/measurement",
+    "measurement-data-access-search": "libs/measurement/data-access/search",
+    "measurement-e2e": "apps/measurement-e2e",
+    "measurement-feature-search": "libs/measurement/feature/search",
+    "measurement-feature-search-result": "libs/measurement/feature/search-result",
+    "shared-data-access-http-service": "libs/shared/data-access/http-service",
+    "shared-ui-input-control": "libs/shared/ui/input-control",
+    "shared-ui-search-control": "libs/shared/ui/search-control",
+    "shell": "apps/shell",
+    "shell-e2e": "apps/shell-e2e"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/ui/input-control",
+  "sourceRoot": "libs/shared/ui/input-control/src",
+  "prefix": "ep-monorepo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/ui/input-control"],
+      "options": {
+        "jestConfig": "libs/shared/ui/input-control/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/ui/input-control/src/**/*.ts",
+          "libs/shared/ui/input-control/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

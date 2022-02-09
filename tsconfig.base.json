@@ -1,0 +1,39 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2017", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ep-monorepo/measurement/data-access/search": [
+        "libs/measurement/data-access/search/src/index.ts"
+      ],
+      "@ep-monorepo/measurement/feature/search": [
+        "libs/measurement/feature/search/src/index.ts"
+      ],
+      "@ep-monorepo/measurement/feature/search-result": [
+        "libs/measurement/feature/search-result/src/index.ts"
+      ],
+      "@ep-monorepo/shared/data-access/http-service": [
+        "libs/shared/data-access/http-service/src/index.ts"
+      ],
+      "@ep-monorepo/shared/ui/input-control": [
+        "libs/shared/ui/input-control/src/index.ts"
+      ],
+      "@ep-monorepo/shared/ui/search-control": [
+        "libs/shared/ui/search-control/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

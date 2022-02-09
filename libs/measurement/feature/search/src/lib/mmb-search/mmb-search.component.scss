@@ -1,0 +1,18 @@
+::ng-deep {
+    .container {
+        .row {
+            .col-sm {
+                .dew-input {
+                    .p-multiselect {
+                        width: 15rem;
+                    }
+                    .p-calendar {
+                        width: 15rem;
+                    }
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+
+    }
+}

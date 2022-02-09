@@ -1,0 +1,30 @@
+<ng-container [ngSwitch]="type">
+    <ng-container *ngSwitchCase="searchEnum.multiSelectType">
+        <span class="d-block font-weight-light">{{label}}
+            <span *ngIf="this.isRequired" class="text-danger">*</span>
+        </span>
+        <p-multiSelect [formControl]="control" 
+        [options]="multiselectOptions" 
+        [optionLabel]="multiselecOptionLabel" 
+        [virtualScroll]="true"
+        (onChange)="onMultiSelect($event)">
+        </p-multiSelect>
+    </ng-container>
+    <ng-container *ngSwitchCase="searchEnum.dateType">
+        <span class="d-block font-weight-light">{{label}}</span>
+        <span *ngIf="this.isRequired" class="text-danger">*</span>
+        <p-calendar [formControl]="control" 
+        [showTime]="true" 
+        [showIcon]="true" 
+        inputId="time">
+        </p-calendar>
+    </ng-container>
+    <ng-container *ngSwitchCase="searchEnum.checkboxType">
+        <span class="d-block font-weight-light">{{label}}</span>
+        <span *ngIf="this.isRequired" class="text-danger">*</span>
+        <p-checkbox [formControl]="control"
+        binary="true"
+        inputId="zeroVolume">
+    </p-checkbox>
+    </ng-container>
+</ng-container>

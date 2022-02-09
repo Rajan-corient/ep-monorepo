@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/measurement/feature/search",
+  "sourceRoot": "libs/measurement/feature/search/src",
+  "prefix": "ep-monorepo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/measurement/feature/search"],
+      "options": {
+        "jestConfig": "libs/measurement/feature/search/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/measurement/feature/search/src/**/*.ts",
+          "libs/measurement/feature/search/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

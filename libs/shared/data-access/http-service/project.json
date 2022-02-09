@@ -1,0 +1,26 @@
+{
+  "projectType": "library",
+  "root": "libs/shared/data-access/http-service",
+  "sourceRoot": "libs/shared/data-access/http-service/src",
+  "prefix": "ep-monorepo",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/shared/data-access/http-service"],
+      "options": {
+        "jestConfig": "libs/shared/data-access/http-service/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": [
+          "libs/shared/data-access/http-service/src/**/*.ts",
+          "libs/shared/data-access/http-service/src/**/*.html"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

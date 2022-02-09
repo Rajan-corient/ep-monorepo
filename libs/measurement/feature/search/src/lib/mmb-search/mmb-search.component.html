@@ -1,0 +1,144 @@
+
+<div class="mmb-search mt-4">
+    <p-card class="p-card-footer" footer="footer">
+        <div class="row" [formGroup]="measurementSearchForm">
+            <div class="col-sm">
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.AssetGroup"
+                    [isRequired]="true"
+                    [control]="measurementSearchForm.get('assetGroup')" 
+                    [multiselectOptions]="states" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'assetGroup')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.MeterOwner" 
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('meterOwner')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'meterOwner')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.MeterLocation"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('meterLocation')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'meterLocation')">
+                    </ep-monorepo-input>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.Product"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('product')" 
+                    [multiselectOptions]="cities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'product')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.FlowComputer"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('flowComputer')"
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'flowComputer')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.MeterName"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('meterName')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'meterName')">
+                    </ep-monorepo-input>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.dateType"
+                    [label]="measurementEnum.StartDateFrom"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('fromDate')"
+                    [dateValue]="dateValue">
+                </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.dateType"
+                    [label]="measurementEnum.StartDateTo"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('fromTo')"
+                    [dateValue]="dateValue">
+                </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.TicktAssociationStatus"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('ticketStatus')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'ticketStatus')">
+                    </ep-monorepo-input>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType"
+                    [label]="measurementEnum.Type"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('ticketType')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'ticketType')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.multiSelectType" 
+                    [label]="measurementEnum.TicketNumber"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('ticketNumber')" 
+                    [multiselectOptions]="copyOfCities" 
+                    multiselecOptionLabel="name"
+                    (selectEvent)="handleMultiSelect($event, 'ticketNumber')">
+                    </ep-monorepo-input>
+                </div>
+                <div class="dew-input row">
+                    <ep-monorepo-input 
+                    [type]="searchEnum.checkboxType"
+                    [label]="measurementEnum.ShowZeroVolumeTicket"
+                    [isRequired]="false"
+                    [control]="measurementSearchForm.get('zeroVolumeTicket')">
+                    </ep-monorepo-input>
+                </div>
+            </div>
+        </div>
+        <p-divider></p-divider>
+        <div class="row">
+            <ep-monorepo-search-control (searchEvent)="handleSearch($event)" (clearEvent)="handleClear($event)"></ep-monorepo-search-control>
+        </div>
+    </p-card>
+</div>
